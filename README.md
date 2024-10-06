@@ -3,23 +3,12 @@ Excel generator from JSON
 Реализация для `PHP`: link keeroline/gophp-excel
 
 Сборка бинарного файла:
-```linux
-apt update
 
-apt install wget
-
-wget https://dl.google.com/go/go1.21.5.linux-amd64.tar.gz
-
-tar -C /opt -xzf go1.21.5.linux-amd64.tar.gz
-
-export PATH=$PATH:/opt/go/bin
-
-go version 
-
-MUST BE EQUAL `go version go1.21.5 linux/amd64`
-
-go build -o generator main.go
 ```
+Linux x64:
+GOOS=linux GOARCH=amd64 go build -o bin/Linux/x64/generator main.go
+```
+
 Usage
 ```
 ./generator --dataFilename=/var/www/data/my_excel_data.json
